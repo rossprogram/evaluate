@@ -56,6 +56,11 @@
               :items="['','accept','reject','waitlist']"
               label="Final decision"
 	      ></v-select>
+	    <v-select
+              v-model="offerLocation"
+              :items="['','ohio','indiana']"
+              label="Location"
+	      ></v-select>
 	    <span v-if="applicationOffer && applicationOffer.evaluator">Made by {{ applicationOffer.evaluator.email }} {{ applicationOffer.updatedAt | moment("from", "now") }}</span>
 
 	    <span v-if="applicationOffer.decision">Applicant decision is &ldquo;{{ applicationOffer.decision }}&rdquo;</span>
@@ -402,7 +407,10 @@ export default {
       get() { if (this.applicationOffer && this.applicationOffer.offer) return this.applicationOffer.offer; return ''; },
       set(v) { this.$set(this.updatedOffer, 'offer', v); },
     },
-
+    offerLocation: {
+      get() { if (this.applicationOffer && this.applicationOffer.location) return this.applicationOffer.location; return ''; },
+      set(v) { this.$set(this.updatedOffer, 'location', v); },
+    },
   },
 
   data() {
