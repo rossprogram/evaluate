@@ -58,7 +58,7 @@
 	      ></v-select>
 	    <v-select
               v-model="offerLocation"
-              :items="['','ohio','indiana']"
+              :items="['','ohio','indiana','philippines']"
               label="Location"
 	      ></v-select>
 	    <span v-if="applicationOffer && applicationOffer.evaluator">Made by {{ applicationOffer.evaluator.email }} {{ applicationOffer.updatedAt | moment("from", "now") }}</span>

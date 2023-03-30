@@ -77,7 +77,7 @@
   <v-row><v-col><v-card>
 	<v-card-title>Applications</v-card-title>
 	<v-card-subtitle>{{filteredApplications.length}} application{{filteredApplications.length == 1 ? '' : 's'}}.  Accept {{filteredOffers.filter( (offer) => offer.offer == 'accept' ).length }}
-	  = {{filteredOffers.filter( (offer) => offer.offer == 'accept' && offer.location === 'ohio' ).length }} Ohio + {{filteredOffers.filter( (offer) => offer.offer == 'accept' && offer.location === 'indiana' ).length }} Indiana.
+	  = {{filteredOffers.filter( (offer) => offer.offer == 'accept' && offer.location === 'ohio' ).length }} Ohio + {{filteredOffers.filter( (offer) => offer.offer == 'accept' && offer.location === 'indiana' ).length }} Indiana + {{filteredOffers.filter( (offer) => offer.offer == 'accept' && offer.location === 'philippines' ).length }} Philippines.
 	  Waitlist {{filteredOffers.filter( (offer) => offer.offer == 'waitlist' ).length }}.  Reject {{filteredOffers.filter( (offer) => offer.offer == 'reject' ).length }}.</v-card-subtitle>
 	<v-list-item two-line v-for="application in filteredApplications"
 		     :href="`/applications/${application.id}`"
