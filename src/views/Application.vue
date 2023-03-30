@@ -126,8 +126,10 @@
 	<v-card-title>Which Programs?</v-card-title>
 	<v-card-text>
 	  <p>
-	    <strong>apply USA:</strong> {{ application.applyingToUSA }}<br/>
-	    <strong>arrive USA:</strong> {{ application.arriveAtStartUSA }}<br/>
+	    <strong>apply Ohio:</strong> {{ application.applyingToOhio }}<br/>
+	    <strong>arrive Ohio:</strong> {{ application.arriveAtStartOhio }}<br/>
+	    <strong>apply Indiana:</strong> {{ application.applyingToIndiana }}<br/>
+	    <strong>arrive Indiana:</strong> {{ application.arriveAtStartIndiana }}<br/>
 	    <strong>apply Asia:</strong> {{ application.applyingToAsia }}<br/>
 	    <strong>arrive Asia:</strong> {{ application.arriveAtStartAsia }}<br/>
 	    <strong>preferredLocation:</strong> {{ application.preferredLocation}}<br/>
