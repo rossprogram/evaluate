@@ -174,6 +174,13 @@
 	</v-card-text>
   </v-card></v-col></v-row>
 
+  <v-row v-if="application.juniorCounselor"><v-col><v-card>
+	<v-card-title>Mathematical interests</v-card-title>
+	<v-card-text>
+	 <vue-markdown :source="application.mostInterestingMath"></vue-markdown>
+	</v-card-text>
+  </v-card></v-col></v-row>
+
   <v-row v-if="! application.juniorCounselor"><v-col><v-card>
 	<v-card-title>Personal Statement</v-card-title>
 	<v-card-text>
@@ -181,17 +188,38 @@
 	</v-card-text>
   </v-card></v-col></v-row>
 
-  <v-row v-if="application.juniorCounselor"><v-col><v-card>
+  <v-row v-if="! application.juniorCounselor"><v-col><v-card>
+	<v-card-title>Passion</v-card-title>
+	<v-card-text>
+	 <vue-markdown :source="application.passion"></vue-markdown>
+	</v-card-text>
+  </v-card></v-col></v-row>
+
+  <v-row><v-col><v-card>
+	<v-card-title>Community</v-card-title>
+	<v-card-text>
+	 <vue-markdown :source="application.community"></vue-markdown>
+	</v-card-text>
+  </v-card></v-col></v-row>
+
+  <v-row><v-col><v-card>
+	<v-card-title>Collaboration</v-card-title>
+	<v-card-text>
+	 <vue-markdown :source="application.collaboration"></vue-markdown>
+	</v-card-text>
+  </v-card></v-col></v-row>
+
+  <v-row><v-col><v-card>
 	<v-card-title>Previous experience</v-card-title>
 	<v-card-text>
 	 <vue-markdown :source="application.previousExperience"></vue-markdown>
 	</v-card-text>
   </v-card></v-col></v-row>
 
-  <v-row v-if="application.juniorCounselor"><v-col><v-card>
-	<v-card-title>Most interesting parts of Ross</v-card-title>
+  <v-row v-if="! application.juniorCounselor"><v-col><v-card>
+	<v-card-title>Referral</v-card-title>
 	<v-card-text>
-	 <vue-markdown :source="application.mostInterestingRoss"></vue-markdown>
+	 <vue-markdown :source="application.referral"></vue-markdown>
 	</v-card-text>
   </v-card></v-col></v-row>
 
@@ -202,20 +230,6 @@
 	</v-card-text>
   </v-card></v-col></v-row>
 
-  <v-row v-if="application.juniorCounselor"><v-col><v-card>
-	<v-card-title>Mathematical interests</v-card-title>
-	<v-card-text>
-	 <vue-markdown :source="application.mostInterestingMath"></vue-markdown>
-	</v-card-text>
-  </v-card></v-col></v-row>
-
-  <v-row><v-col><v-card>
-	<v-card-title>What is an interesting mathematical problem you have worked on?</v-card-title>
-	<v-card-text>
-	  <vue-markdown :source="application.interestingProblem"></vue-markdown>
-	</v-card-text>
-  </v-card></v-col></v-row>
-
   <v-row><v-col><v-card>
 	<v-card-title>What do you plan to major in at college?</v-card-title>
 	<v-card-text>
@@ -223,41 +237,13 @@
 	</v-card-text>
   </v-card></v-col></v-row>
 
-
-  <v-row v-if="!application.juniorCounselor"><v-col><v-card>
-	<v-card-title>Have you worked on some interesting mathematical projects?</v-card-title>
+  <v-row><v-col><v-card>
+	<v-card-title>Other information?</v-card-title>
 	<v-card-text>
-	  <vue-markdown :source="application.interestingProjects"></vue-markdown>
+	  <vue-markdown :source="application.otherInformation"></vue-markdown>
 	</v-card-text>
   </v-card></v-col></v-row>
 
-  <v-row v-if="!application.juniorCounselor"><v-col><v-card>
-	<v-card-title>Have you recently participated in some math competitions?</v-card-title>
-	<v-card-text>
-	  <vue-markdown :source="application.competitions"></vue-markdown>
-	</v-card-text>
-  </v-card></v-col></v-row>
-
-  <v-row v-if="!application.juniorCounselor"><v-col><v-card>
-	<v-card-title>What have you read recently about mathematics?</v-card-title>
-	<v-card-text>
-	  <vue-markdown :source="application.books"></vue-markdown>
-	</v-card-text>
-  </v-card></v-col></v-row>
-
-  <v-row v-if="!application.juniorCounselor"><v-col><v-card>
-	<v-card-title>When you work on hard math problems do you usually work alone? Or with a group of friends?</v-card-title>
-	<v-card-text>
-	  <vue-markdown :source="application.collaboration"></vue-markdown>
-	</v-card-text>
-  </v-card></v-col></v-row>
-
-  <v-row v-if="!application.juniorCounselor"><v-col><v-card>
-	<v-card-title>Have you taken math courses outside of the standard high school curriculum?</v-card-title>
-	<v-card-text>
-	  <vue-markdown :source="application.otherCourses"></vue-markdown>
-	</v-card-text>
-  </v-card></v-col></v-row>
 
   <v-row v-if="!application.juniorCounselor"><v-col><v-card>
 	<v-card-title>Are you eager to spend five or six weeks away from home, with no distractions from computers or video games or smart phones, focusing all of your energies on one narrow area of mathematics?</v-card-title>
